@@ -15,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="mSq-Ni-jaS">
-                                <rect key="frame" x="159" y="376" width="96" height="144"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="mSq-Ni-jaS">
+                                <rect key="frame" x="10" y="388" width="394" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9j-LW-Tom">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.70359264960000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Hqe-QR-eyU"/>
@@ -38,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8X-QB-Wnh">
-                                        <rect key="frame" x="0.0" y="94" width="96" height="50"/>
+                                        <rect key="frame" x="0.0" y="100" width="394" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.70359264960000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <state key="normal" title="Login">
@@ -61,12 +61,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="mSq-Ni-jaS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KjB-Mg-fXd"/>
-                            <constraint firstItem="mSq-Ni-jaS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o2h-Fn-MVc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mSq-Ni-jaS" secondAttribute="trailing" constant="10" id="5zq-SH-7P7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="mSq-Ni-jaS" secondAttribute="bottom" constant="324" id="C3x-zG-vhv"/>
+                            <constraint firstItem="mSq-Ni-jaS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="QeW-KN-HEf"/>
+                            <constraint firstItem="mSq-Ni-jaS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="tMh-3t-8Tr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="gjt-43-WJ3"/>
+                    <connections>
+                        <outlet property="loginButton" destination="n8X-QB-Wnh" id="A3q-Jo-gtc"/>
+                        <outlet property="signupButton" destination="N9j-LW-Tom" id="jG3-aj-GTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,6 +155,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="N6I-es-V4a" id="IZg-lT-Weq"/>
                         <outlet property="errorLabel" destination="8Yh-PL-wsG" id="i6w-f3-qpd"/>
+                        <outlet property="loginButton" destination="FzT-b0-zhd" id="PXL-ya-AQK"/>
                         <outlet property="passwordTextField" destination="Iij-aa-fd7" id="jua-rU-LwL"/>
                     </connections>
                 </viewController>
@@ -282,6 +289,7 @@ Home Screen</string>
                         <outlet property="firstNameTextField" destination="psy-LA-Ueg" id="8rn-nQ-mLL"/>
                         <outlet property="lastNameTextField" destination="i6s-PO-Yzz" id="N9N-vQ-bDF"/>
                         <outlet property="passwordTextField" destination="jUV-jD-u30" id="jnW-PI-bpg"/>
+                        <outlet property="signUpButton" destination="E83-0Q-2Nk" id="MwL-Mi-fIe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcL-GU-2z7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

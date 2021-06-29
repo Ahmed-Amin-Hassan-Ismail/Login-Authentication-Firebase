@@ -9,12 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // outlets
+    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setUpElements()
     }
 
 
+}
+
+extension ViewController {
+    
+    fileprivate func setUpElements() {
+        
+        Utilities.styleFilledButton(signupButton)
+        Utilities.styleFilledButton(loginButton)
+    }
 }
 

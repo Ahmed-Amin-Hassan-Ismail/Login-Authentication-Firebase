@@ -16,6 +16,7 @@
 		157C4C15268B49640047953A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157C4C14268B49640047953A /* SignUpViewController.swift */; };
 		157C4C17268B496F0047953A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157C4C16268B496F0047953A /* LoginViewController.swift */; };
 		157C4C19268B49790047953A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157C4C18268B49790047953A /* HomeViewController.swift */; };
+		15C4B360268B566B00BAFE4C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C4B35F268B566B00BAFE4C /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		157C4C14268B49640047953A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		157C4C16268B496F0047953A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		157C4C18268B49790047953A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		15C4B35F268B566B00BAFE4C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				157C4C0F268B48A20047953A /* Core Application */,
+				15C4B35E268B565700BAFE4C /* Utilities */,
 				157C4C13268B48E80047953A /* View Controllers  */,
 				157C4C11268B48B80047953A /* Storyboard */,
 				157C4C12268B48C30047953A /* Configuration */,
@@ -114,6 +117,14 @@
 				157C4C18268B49790047953A /* HomeViewController.swift */,
 			);
 			path = "View Controllers ";
+			sourceTree = "<group>";
+		};
+		15C4B35E268B565700BAFE4C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				15C4B35F268B566B00BAFE4C /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 			files = (
 				157C4C00268B46760047953A /* ViewController.swift in Sources */,
 				157C4BFC268B46760047953A /* AppDelegate.swift in Sources */,
+				15C4B360268B566B00BAFE4C /* Utilities.swift in Sources */,
 				157C4C15268B49640047953A /* SignUpViewController.swift in Sources */,
 				157C4C17268B496F0047953A /* LoginViewController.swift in Sources */,
 				157C4BFE268B46760047953A /* SceneDelegate.swift in Sources */,
