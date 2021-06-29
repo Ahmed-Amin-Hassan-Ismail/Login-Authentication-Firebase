@@ -87,13 +87,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iN-jo-UXc">
-                                <rect key="frame" x="40" y="80" width="334" height="206"/>
+                                <rect key="frame" x="40" y="10" width="334" height="66"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-bn-S3L">
-                                <rect key="frame" x="10" y="386" width="394" height="260"/>
+                                <rect key="frame" x="10" y="86" width="394" height="260"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N6I-es-V4a">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
@@ -124,7 +124,7 @@
                                             <action selector="loginTapped:" destination="nDv-zS-Ut9" eventType="touchUpInside" id="m3t-po-k9O"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error , whereas Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-PL-wsG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error , whereas Login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-PL-wsG">
                                         <rect key="frame" x="0.0" y="210" width="394" height="50"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.83786311619999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -141,12 +141,12 @@
                         <constraints>
                             <constraint firstItem="0hc-dR-xzv" firstAttribute="trailing" secondItem="3iN-jo-UXc" secondAttribute="trailing" constant="40" id="2aF-NA-i32"/>
                             <constraint firstItem="yB6-bn-S3L" firstAttribute="leading" secondItem="0hc-dR-xzv" secondAttribute="leading" constant="10" id="Nsl-Wz-2Dn"/>
-                            <constraint firstItem="0hc-dR-xzv" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="yB6-bn-S3L" secondAttribute="bottom" constant="162" id="OvH-u2-tMn"/>
+                            <constraint firstItem="0hc-dR-xzv" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yB6-bn-S3L" secondAttribute="bottom" constant="162" id="OvH-u2-tMn"/>
                             <constraint firstItem="3iN-jo-UXc" firstAttribute="leading" secondItem="0hc-dR-xzv" secondAttribute="leading" constant="40" id="QhN-d8-W4h"/>
                             <constraint firstItem="0hc-dR-xzv" firstAttribute="trailing" secondItem="yB6-bn-S3L" secondAttribute="trailing" constant="10" id="Qhk-y0-VEI"/>
-                            <constraint firstItem="yB6-bn-S3L" firstAttribute="top" secondItem="3iN-jo-UXc" secondAttribute="bottom" constant="100" id="aQ8-nQ-QIJ"/>
+                            <constraint firstItem="yB6-bn-S3L" firstAttribute="top" secondItem="3iN-jo-UXc" secondAttribute="bottom" constant="10" id="aQ8-nQ-QIJ"/>
                             <constraint firstItem="c7L-CL-jmT" firstAttribute="top" secondItem="0hc-dR-xzv" secondAttribute="top" constant="20" id="lex-qS-uKo"/>
-                            <constraint firstItem="3iN-jo-UXc" firstAttribute="top" secondItem="0hc-dR-xzv" secondAttribute="top" constant="80" id="r4D-7d-VDv"/>
+                            <constraint firstItem="3iN-jo-UXc" firstAttribute="top" secondItem="0hc-dR-xzv" secondAttribute="top" constant="10" id="r4D-7d-VDv"/>
                             <constraint firstItem="0hc-dR-xzv" firstAttribute="trailing" secondItem="c7L-CL-jmT" secondAttribute="trailing" constant="20" id="ysP-Dt-Ys1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0hc-dR-xzv"/>
@@ -201,13 +201,13 @@ Home Screen</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0X-4d-Pgs">
-                                <rect key="frame" x="40" y="80" width="334" height="66"/>
+                                <rect key="frame" x="40" y="10" width="334" height="66"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aig-dn-dgH">
-                                <rect key="frame" x="10" y="246" width="394" height="400"/>
+                                <rect key="frame" x="10" y="86" width="394" height="400"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psy-LA-Ueg">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
@@ -248,7 +248,7 @@ Home Screen</string>
                                             <action selector="signUpTapped:" destination="iIf-jZ-8rQ" eventType="touchUpInside" id="ERT-Ls-siU"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error , whereas sign up " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH0-yt-NfH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error , whereas sign up " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH0-yt-NfH">
                                         <rect key="frame" x="0.0" y="350" width="394" height="50"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.83786311619999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -270,14 +270,14 @@ Home Screen</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="CbO-JG-GSg" firstAttribute="top" secondItem="Sgu-Jz-X7i" secondAttribute="top" constant="20" id="957-vx-WCL"/>
-                            <constraint firstItem="t0X-4d-Pgs" firstAttribute="top" secondItem="Sgu-Jz-X7i" secondAttribute="top" constant="80" id="Icd-hv-Vlj"/>
+                            <constraint firstItem="t0X-4d-Pgs" firstAttribute="top" secondItem="Sgu-Jz-X7i" secondAttribute="top" constant="10" id="Icd-hv-Vlj"/>
                             <constraint firstItem="Sgu-Jz-X7i" firstAttribute="trailing" secondItem="t0X-4d-Pgs" secondAttribute="trailing" constant="40" id="PZk-90-o39"/>
                             <constraint firstItem="aig-dn-dgH" firstAttribute="leading" secondItem="Sgu-Jz-X7i" secondAttribute="leading" constant="10" id="Uzw-ny-MR2"/>
                             <constraint firstItem="Sgu-Jz-X7i" firstAttribute="trailing" secondItem="aig-dn-dgH" secondAttribute="trailing" constant="10" id="aTs-Zv-f4m"/>
                             <constraint firstItem="Sgu-Jz-X7i" firstAttribute="trailing" secondItem="CbO-JG-GSg" secondAttribute="trailing" constant="20" id="bjr-my-i3w"/>
-                            <constraint firstItem="Sgu-Jz-X7i" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="aig-dn-dgH" secondAttribute="bottom" constant="182" id="h4S-Mt-8mi"/>
+                            <constraint firstItem="Sgu-Jz-X7i" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aig-dn-dgH" secondAttribute="bottom" constant="182" id="h4S-Mt-8mi"/>
                             <constraint firstItem="t0X-4d-Pgs" firstAttribute="leading" secondItem="Sgu-Jz-X7i" secondAttribute="leading" constant="40" id="tsZ-eE-OV5"/>
-                            <constraint firstItem="aig-dn-dgH" firstAttribute="top" secondItem="t0X-4d-Pgs" secondAttribute="bottom" constant="100" id="u9n-cQ-GcK"/>
+                            <constraint firstItem="aig-dn-dgH" firstAttribute="top" secondItem="t0X-4d-Pgs" secondAttribute="bottom" constant="10" id="u9n-cQ-GcK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sgu-Jz-X7i"/>
                     </view>

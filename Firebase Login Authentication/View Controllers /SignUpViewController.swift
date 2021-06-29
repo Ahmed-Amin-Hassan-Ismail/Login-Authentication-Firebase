@@ -21,50 +21,53 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupElements()
     }
     
     // Actions
     @IBAction func signUpTapped(_ sender: Any) {
         
-        // validate the fields
+        // Validate for fields
         let error = validateFields()
         
         if error != nil {
-           showErrorMessage(error!)
+            errorMessage(error!)
         } else {
-            // Create the users
-            let cleanedFirstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let cleanedLastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            // Create the user
+            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            Auth.auth().createUser(withEmail: cleanedEmail, password: cleanedPassword) { [weak self] (result, errors) in
+            Auth.auth().createUser(withEmail: email, password: password) { [weak self] (result, error) in
                 guard let self = self else { return }
                 
-                if errors != nil {
-                    self.showErrorMessage("Error Creating by user")
+                // Check if error
+                if error != nil {
+                    // There is an error
+                    self.errorMessage("Error User Creating")
                 } else {
-                    let _ = Firestore.firestore().collection("Users").addDocument(data: [ cleanedFirstName:"firstName", cleanedLastName: "lastName", "uid": result!.user.uid ]) { (errors) in
+                    // Now Store in Database
+                    let db = Firestore.firestore()
+                    db.collection("Users").addDocument(data: ["firstName": firstName, "lastName": lastName, "uid": result!.user.uid]) { (error) in
                         
-                        if errors != nil {
-                            self.showErrorMessage("Error saving data")
+                        if error != nil {
+                            self.errorMessage("Users data couldn't save!")
                         }
                     }
-                    self.transitionToHome()
+                    // Transition to home screen
+                    self.navigateToHome()
                 }
                 
             }
+            
         }
-        
-        
-        
     }
-
+    
 }
 
 extension SignUpViewController {
@@ -85,33 +88,37 @@ extension SignUpViewController {
     
     fileprivate func validateFields() -> String? {
         
-        // To remove any sapces and new lines
-        // i means if users clicks space while in textfield it ignores and acts if the textfield is empty
+        // trimming to remove any sapce and special character
+        // Check the field is incorrect return mesaage otherwise return nil
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
-            return "please fill any empty field, it's required"
+            return "Please fill your empty fields, and try again!"
         }
         
-        // Validate for password
-        let newPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        if Utilities.isPasswordValid(newPassword) == false {
-            return " please make sure your password is at least 8 characters, contains special characters and numbers."
+        // Check if the password is secure
+        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isPasswordValid(cleanedPassword) == false {
+            return "password is not secure enough, please make sure your password at least 8 charcter and contains special character"
         }
+        
         return nil
     }
     
-    fileprivate func showErrorMessage(_ message: String) {
+    
+    fileprivate func errorMessage(_ message: String) {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
     
-    fileprivate func transitionToHome() {
-        let homeViewController = UIStoryboard().instantiateViewController(identifier: "HomeViewController") as? HomeViewController
+    fileprivate func navigateToHome() {
+        let homeViewController  = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }
+    
+    
 }
