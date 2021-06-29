@@ -122,7 +122,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginTapped:" destination="nDv-zS-Ut9" eventType="touchUpInside" id="m3t-po-k9O"/>
-                                            <segue destination="nKl-DD-phG" kind="show" identifier="logHome" id="QoZ-j1-4BW"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error , whereas Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-PL-wsG">
@@ -166,13 +165,13 @@
         <!--Home View Controller-->
         <scene sceneID="0z9-Tb-lcg">
             <objects>
-                <viewController id="nKl-DD-phG" customClass="HomeViewController" customModule="Firebase_Login_Authentication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="nKl-DD-phG" customClass="HomeViewController" customModule="Firebase_Login_Authentication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XHa-9T-XJx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CG-Au-Wub">
-                                <rect key="frame" x="31.5" y="355.5" width="351.5" height="131.5"/>
+                                <rect key="frame" x="31.5" y="382.5" width="351.5" height="131.5"/>
                                 <string key="text">Welcome To
 Home Screen</string>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="50"/>
@@ -247,7 +246,6 @@ Home Screen</string>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signUpTapped:" destination="iIf-jZ-8rQ" eventType="touchUpInside" id="ERT-Ls-siU"/>
-                                            <segue destination="nKl-DD-phG" kind="show" identifier="signHome" id="VSR-3T-uO8"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error , whereas sign up " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH0-yt-NfH">
@@ -318,7 +316,4 @@ Home Screen</string>
     <resources>
         <image name="xmark.octagon.fill" catalog="system" width="64" height="56"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="QoZ-j1-4BW"/>
-    </inferredMetricsTieBreakers>
 </document>

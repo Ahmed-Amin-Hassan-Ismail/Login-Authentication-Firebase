@@ -6,6 +6,10 @@ target 'Firebase Login Authentication' do
   use_frameworks!
 
    pod 'Firebase/Analytics'
+   pod 'Firebase/Auth'
+   pod 'Firebase/Core'
+   pod 'Firebase/Firestore'
+
 
   # Pods for Firebase Login Authentication
 
